@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Chebbi | Portfolio SISR</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#0a0a0a] text-[#ededed] font-inter scroll-smooth">
+
+    <!-- NAV -->
+    <nav
+        class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-8 py-4 flex justify-between items-center">
+        <div class="text-xl font-black text-blue-500 uppercase font-montserrat">
+            Hamza Chebbi
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em]">
+            <a href="#accueil" class="nav-link text-gray-400">Accueil</a>
+            <a href="#competences" class="nav-link text-gray-400">Compétences</a>
+            <a href="#realisations" class="nav-link text-gray-400">Réalisations</a>
+            <a href="#synthese" class="nav-link text-gray-400">Tableau de Synthèse</a>
+            <a href="#langues" class="nav-link text-gray-400">Langues</a>
+            <a href="#contact" class="nav-link text-blue-500 font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header id="accueil" class="min-h-screen flex items-center justify-center px-8 md:px-24">
+
+        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl gap-12">
+
+            <!-- TEXTE -->
+            <div class="flex-1 text-center md:text-left">
+
+                <h1 class="text-5xl md:text-8xl font-black text-blue-500 uppercase">
+                    Hamza <br>Chebbi
+                </h1>
+
+                <p class="text-gray-400 mt-6 max-w-xl">
+                    Double cursus Socle Numérique en informatique & BTS SIO option SISR (solutions d'infrastructure
+                    ,systèmes et réseaux ), je développe une expertise technique centrée sur la gestion et la
+                    sécurisation des infrastructures.
+                    <br>Dans le cadre de la validation de mon diplôme et pour poursuivre ma montée en compétences, je
+                    suis activement à la recherche d’une alternance dès septembre 2026.
+                    <br>Mon objectif : Intégrer une équipe technique pour relever vos défis d'infrastructure et
+                    contribuer activement à la performance de votre système d'information.
+
+            </div>
+
+            <!-- PHOTO + CV -->
+            <div class="flex-shrink-0 flex flex-col items-center">
+
+                <!-- PHOTO -->
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-blue-500 overflow-hidden shadow-2xl">
+                    <img src="ma-photo.jpg" class="w-full h-full object-cover transition-all duration-700">
+                </div>
+
+                <!-- CV -->
+                <a href="curriculum_vitae.pdf" target="_blank"
+                    class="mt-6 border border-blue-500 px-8 py-3 text-xs uppercase font-bold text-blue-500 hover:bg-blue-500 hover:text-white transition">
+                    Curriculum Vitae
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- COMPETENCES -->
+    <section id="competences" class="py-24 px-8 max-w-7xl mx-auto border-t border-white/5">
+
+        <h2 class="text-3xl font-black mb-16 border-l-4 border-blue-600 pl-6 uppercase">
+            Compétences
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card-skill">
+                <h3> Administration systèmes et réseaux</h3>
+            </div>
+            <div class="card-skill">
+                <h3> Cybersécurité défensive</h3>
+            </div>
+            <div class="card-skill">
+                <h3> Supervision SI </h3>
+            </div>
+            <div class="card-skill">
+                <h3> Virtualisation</h3>
+            </div>
+            <div class="card-skill">
+                <h3> développement agent IA autonomes en Python</h3>
+            </div>
+            <div class="card-skill">
+                <h3> Création site web </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- REALISATIONS -->
+    <section id="realisations" class="py-24 px-8 max-w-7xl mx-auto border-t border-white/5">
+
+        <h2 class="text-3xl font-black mb-16 border-l-4 border-blue-600 pl-6 uppercase">
+            Réalisations
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="project-card">
+                <h3>Projet 1</h3>
+                <p><strong>Conception et mise en place d’une infrastructure réseau d’entreprise multi-site (siège et
+                        agence)</strong></p>
+                <img src="image_1.png" alt="Projet 1" onclick="toggleText('description-image')">
+
+                <p id="description-image" class="hidden hidden-text">
+                    La réalisation consiste en la conception et la mise en place d’une infrastructure réseau multi-site
+                    comprenant un siège et une agence interconnectés via un WAN simulé à l’aide d’un Cloud GNS3. Le
+                    siège est structuré autour d’un pare-feu pfSense assurant le routage et le filtrage entre plusieurs
+                    réseaux, avec notamment un VLAN dédié aux utilisateurs, tandis que les serveurs sont placés dans des
+                    réseaux distincts. L’agence repose sur une architecture plus simple avec un réseau local dédié.
+                    Le serveur Active Directory est positionné sur une interface dédiée du pare-feu pfSense, dans un
+                    réseau spécifique, afin d’isoler les services critiques et de renforcer la sécurité. Un serveur
+                    Ubuntu complète l’infrastructure en assurant des services complémentaires, positionné dans une zone
+                    DMZ dédiée, afin d’isoler les services exposés du reste du réseau interne tels que l’hébergement web
+                    ou la sauvegarde. Cette organisation permet un meilleur contrôle des flux et une segmentation
+                    logique du système d’information.
+
+                    Des tests de connectivité ont été réalisés (adressage IP, ping, accès aux équipements) afin de
+                    valider le fonctionnement global de la solution. Une interconnexion sécurisée entre les sites via un
+                    tunnel VPN IPsec est prévue afin de garantir la confidentialité, l’intégrité et l’authentification
+                    des échanges inter-sites.
+
+                    Ce schéma représente l’architecture logique de l’infrastructure réseau, en complément de la
+                    topologie réelle réalisée sous GNS3.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 2</h3>
+                <p><strong>Déploiement d’une solution de supervision de l’infrastructure</strong></p>
+                <img src="image_2.png" alt="Projet 2" onclick="toggleText('description-image-2')">
+
+                <p id="description-image-2" class="hidden hidden-text">
+                    La supervision mise en place repose sur la centralisation des journaux d’événements du pare-feu. Le
+                    protocole syslog a été configuré sur pfSense afin de transmettre automatiquement les logs vers un
+                    serveur de supervision disposant d’une adresse IP fixe. Cette configuration permet de centraliser
+                    les
+                    événements, de consulter les journaux à distance, d’analyser l’activité du pare-feu et d’identifier
+                    d’éventuels incidents ou anomalies. Les logs reçus ont ensuite été exploités afin de vérifier les
+                    connexions réalisées, les règles de filtrage appliquées ainsi que l’activité générale du réseau.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Projet 3</h3>
+                <p>Pentesting du site web Punitech</p>
+                <img src="image_3.png" alt="Projet 3" onclick="toggleText('description-image-3')">
+
+                <p id="description-image-3" class="hidden hidden-text">
+                    Lors de mon stage chez Punitech, j’ai participé à la réalisation d’un audit de sécurité orienté
+                    pentest applicatif web, centré sur les risques liés à un utilisateur authentifié malveillant.
+                    L’objectif était d’identifier les vulnérabilités exploitables pouvant impacter la confidentialité
+                    des données clients, l’intégrité des transactions financières et la robustesse globale de la
+                    plateforme.
+                    J’ai conçu et exécuté un plan de tests structuré autour de scénarios concrets : accès non autorisé
+                    aux données d’autres clients (IDOR, défauts de cloisonnement inter-comptes), manipulation de
+                    transactions sensibles (montants, statuts de paiement, remboursements, rejeu de requêtes),
+                    contournement des contrôles d’accès, abus de fonctionnalités métier, ainsi que recherche de failles
+                    classiques telles que XSS, injections SQL/NoSQL, mauvaises configurations CORS, exposition de
+                    données sensibles ou gestion insuffisante des sessions.
+                    Les tests ont été réalisés à l’aide d’outils professionnels tels que Burp Suite, Postman, sqlmap,
+                    ainsi que les outils développeur navigateur. J’ai également utilisé des référentiels reconnus comme
+                    OWASP Top 10 et OWASP ASVS afin de prioriser les vulnérabilités selon leur criticité (P1, P2, P3).
+                    Ce projet m’a permis de renforcer mes compétences en tests d’intrusion web, analyse de logique
+                    métier, sécurité des API, contrôle d’accès, gestion de session, méthodologie d’audit et rédaction de
+                    rapports de sécurité orientés risques métier.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TABLEAU DE SYNTHESE -->
+    <section id="synthese" class="py-24 px-8 max-w-7xl mx-auto border-t border-white/5">
+
+        <h2 class="text-3xl font-black mb-16 border-l-4 border-blue-600 pl-6 uppercase">
+            Tableau de Synthèse
+        </h2>
+
+        <!-- Aperçu PDF -->
+        <div class="bg-[#0d0d0d] border border-white/10 rounded-xl p-6 max-w-3xl mx-auto text-center">
+
+            <a href="tableau-synthese.pdf" target="_blank">
+                <iframe src="tableau-synthese.pdf#toolbar=0" width="100%" height="300px"
+                    class="rounded-lg pointer-events-none">
+                </iframe>
+            </a>
+
+            <p class="text-gray-400 mt-4 text-sm uppercase tracking-widest">
+                Cliquer pour ouvrir le PDF complet
+            </p>
+
+            <a href="tableau-synthese.pdf" download
+                class="inline-block mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-bold transition">
+                Télécharger le PDF
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- LANGUES -->
+    <section id="langues" class="py-24 px-8 max-w-7xl mx-auto border-t border-white/5">
+
+        <h2 class="text-3xl font-black mb-16 border-l-4 border-blue-600 pl-6 uppercase">
+            Langues
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-12">
+
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <span>Français</span><span class="text-blue-500">Bilingue</span>
+                </div>
+                <div class="h-1 bg-white/10">
+                    <div class="h-full bg-blue-600 w-full"></div>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <span>Anglais</span><span class="text-blue-500">Intermédiaire</span>
+                </div>
+                <div class="h-1 bg-white/10">
+                    <div class="h-full bg-blue-600 w-[75%]"></div>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <div class="flex justify-between">
+                    <span>Arabe</span><span class="text-blue-500">Maternelle</span>
+                </div>
+                <div class="h-1 bg-white/10">
+                    <div class="h-full bg-blue-600 w-full"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="py-20 px-8 bg-black border-t border-white/5">
+
+        <div class="grid md:grid-cols-3 gap-10 text-gray-500 text-sm">
+
+            <div>
+                <h4 class="text-white uppercase mb-4">Contact</h4>
+                <p>📧 chebbi.hamza2566@gmail.com</p>
+                <p>📞 06 12 14 85 20</p>
+                <p>📍 17 Rue Héliot, 31000 Toulouse, France</p>
+            </div>
+
+            <div>
+                <h4 class="text-white uppercase mb-4">Informations</h4>
+                <button onclick="toggleRGPD()" class="text-blue-500">Clause RGPD</button>
+            </div>
+
+            <div>
+                <h4 class="text-white uppercase mb-4"></h4>
+                <p>
+                    Développé par <span class="text-white font-semibold">Hamza Chebbi</span>
+                    avec <span class="text-blue-400">HTML, CSS et JS </span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="text-center text-[10px] text-gray-700 mt-16">
+            © 2026 Hamza Chebbi — Tous droits réservés
+        </div>
+
+    </footer>
+
+    <!-- RGPD -->
+    <div id="rgpd-modal" class="hidden fixed inset-0 flex items-center justify-center bg-black/95 p-6">
+
+        <div class="bg-[#111] p-8 max-w-xl border border-blue-500/20">
+
+            <h2 class="text-blue-500 text-xl mb-6 uppercase">
+                Politique de confidentialité
+            </h2>
+
+            <div class="text-gray-400 text-sm leading-relaxed space-y-4">
+
+                <p><strong>1. Données personnelles :</strong> Ce site ne collecte aucune donnée personnelle sans votre
+                    consentement explicite.</p>
+
+                <p><strong>2. Sécurité :</strong> Les informations éventuellement transmises (email, téléphone) sont
+                    utilisées uniquement dans un cadre professionnel et ne sont en aucun cas stockées ou partagées.</p>
+
+                <p><strong>3. Confidentialité :</strong> Aucune technologie de suivi (cookies, tracking) n’est utilisée
+                    sur ce site.</p>
+
+                <p><strong>4. Conformité :</strong> Ce site respecte les principes du RGPD et les bonnes pratiques en
+                    cybersécurité appliquées aux systèmes et réseaux.</p>
+
+                <p><strong>5. Contact :</strong> Vous pouvez demander la suppression de toute information vous
+                    concernant via l’adresse email fournie.</p>
+
+            </div>
+            <button onclick="toggleRGPD()" class="mt-6 border border-blue-500 px-6 py-2 text-blue-500">
+                Fermer
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
