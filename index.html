@@ -18,21 +18,39 @@
 <body class="bg-[#0a0a0a] text-[#ededed] font-inter scroll-smooth">
 
     <!-- NAV -->
-    <nav
-        class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-8 py-4 flex justify-between items-center">
-        <div class="text-xl font-black text-blue-500 uppercase font-montserrat">
-            Hamza Chebbi
-        </div>
+   <!-- NAV -->
+<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-8 py-4 flex justify-between items-center">
+    <div class="text-xl font-black text-blue-500 uppercase font-montserrat">
+        Hamza Chebbi
+    </div>
 
-        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em]">
-            <a href="#accueil" class="nav-link text-gray-400">Accueil</a>
-            <a href="#competences" class="nav-link text-gray-400">Compétences</a>
-            <a href="#realisations" class="nav-link text-gray-400">Réalisations</a>
-            <a href="#synthese" class="nav-link text-gray-400">Tableau de Synthèse</a>
-            <a href="#langues" class="nav-link text-gray-400">Langues</a>
-            <a href="#contact" class="nav-link text-blue-500 font-bold">Contact</a>
-        </div>
-    </nav>
+    <!-- Menu desktop -->
+    <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em]">
+        <a href="#accueil" class="nav-link text-gray-400">Accueil</a>
+        <a href="#competences" class="nav-link text-gray-400">Compétences</a>
+        <a href="#realisations" class="nav-link text-gray-400">Réalisations</a>
+        <a href="#synthese" class="nav-link text-gray-400">Tableau de Synthèse</a>
+        <a href="#langues" class="nav-link text-gray-400">Langues</a>
+        <a href="#contact" class="nav-link text-blue-500 font-bold">Contact</a>
+    </div>
+
+    <!-- Bouton hamburger mobile -->
+    <button id="burger" class="md:hidden flex flex-col gap-1.5" onclick="toggleMenu()">
+        <span class="w-6 h-0.5 bg-white block"></span>
+        <span class="w-6 h-0.5 bg-white block"></span>
+        <span class="w-6 h-0.5 bg-white block"></span>
+    </button>
+</nav>
+
+<!-- Menu mobile déroulant -->
+<div id="mobile-menu" class="hidden fixed top-[65px] left-0 w-full bg-black/95 z-40 flex flex-col items-center py-8 gap-6 text-[12px] uppercase tracking-widest border-b border-white/10">
+    <a href="#accueil" class="nav-link text-gray-400" onclick="toggleMenu()">Accueil</a>
+    <a href="#competences" class="nav-link text-gray-400" onclick="toggleMenu()">Compétences</a>
+    <a href="#realisations" class="nav-link text-gray-400" onclick="toggleMenu()">Réalisations</a>
+    <a href="#synthese" class="nav-link text-gray-400" onclick="toggleMenu()">Tableau de Synthèse</a>
+    <a href="#langues" class="nav-link text-gray-400" onclick="toggleMenu()">Langues</a>
+    <a href="#contact" class="nav-link text-blue-500 font-bold" onclick="toggleMenu()">Contact</a>
+</div>
 
     <!-- HEADER -->
     <header id="accueil" class="min-h-screen flex items-center justify-center px-8 md:px-24">
