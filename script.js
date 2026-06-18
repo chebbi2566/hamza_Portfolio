@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 });
+function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+}
 
 function toggleText(id) {
     const text = document.getElementById(id);
